@@ -1,0 +1,5 @@
+# requirements.txt
+flask
+google-genai
+pytest
+pytest-mock
