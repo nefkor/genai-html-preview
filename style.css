@@ -1,48 +1,89 @@
 body {
-    font-family: sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     color: #333;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 90%;
+    margin: 20px;
 }
 
-h1, h2 {
-    color: #007bff;
+h1 {
+    color: #3f51b5; /* Primary color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #5c6bc0;
+    margin-top: 20px;
 }
 
 .input-area {
     width: 100%;
-    height: 100px; /* Reduced height for multiple textareas */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     box-sizing: border-box;
     font-family: monospace;
     resize: vertical;
-    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Smooth border transition */
 }
 
-.preview-container, .text-to-html {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    overflow-x: auto;
+.input-area:focus {
+    border-color: #3f51b5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.2);
+}
+
+.text-to-html, .preview-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+}
+
+.convert-button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.convert-button:hover {
+    background-color: #303f9f;
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.convert-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .preview-area {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     border: none;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent iframe content from overflowing rounded corners */
 }
 
 #preview-iframe {
@@ -51,31 +92,33 @@ h1, h2 {
     border: none;
 }
 
-.convert-button {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
+.error-message {
+    color: #d32f2f;
+    margin-top: 10px;
 }
 
-.converted-text{
-    font-family: monospace;
-    white-space: pre-wrap;
-}
-
-/* ... (Existing CSS) */
+/* New styles for the code output area */
 .output-area {
     width: 100%;
-    height: 100px; /* Or adjust as needed */
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
+    min-height: 150px; /* Increased minimum height */
+    padding: 15px;
+    margin-top: 20px; /* Increased top margin for more separation */
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     box-sizing: border-box;
-    font-family: monospace;
-    resize: vertical;
-    border-radius: 4px;
-    white-space: pre-wrap; /* Important for preserving line breaks */
+    font-family: 'Courier New', monospace; /* Monospace font for code */
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Darker text for better contrast */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.output-area:focus {
+    border-color: #3f51b5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }

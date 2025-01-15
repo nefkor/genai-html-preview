@@ -64,7 +64,7 @@ const app = createApp({
                 <textarea v-model="textMessage" placeholder="Enter text message here..." class="input-area"></textarea>
                 <button @click="convertToHtml" class="convert-button" :disabled="loading">
                     <span v-if="loading">Loading...</span>
-                    <span v-else>Convert to HTML</span>
+                    <span v-else>Generate HTML version</span>
                 </button>
                 <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
                 <textarea readonly v-model="messageHtml" placeholder="Converted HTML will appear here..." class="output-area"></textarea>
