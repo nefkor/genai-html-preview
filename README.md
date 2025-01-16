@@ -8,6 +8,10 @@ This project demonstrates a simple web application that uses Google's Gemini AI 
 * **HTML Preview:**  Displays a live preview of the generated HTML within the app.
 * **Copy to Clipboard:**  Allows users to easily copy the generated HTML code.  *(This feature may need to be added - see below)*
 * **Simple Interface:**  Provides a clean and user-friendly interface for text input and HTML output.
+* **Screenshot**:
+
+![HTML Previewer Screenshot](html-preview-screenshot.png)
+
 
 
 ## Technologies Used
