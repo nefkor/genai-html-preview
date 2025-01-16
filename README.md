@@ -22,7 +22,7 @@ This project demonstrates a simple web application that uses Google's Gemini AI 
 
 1. **Prerequisites:**
     * Python 3.9 or higher
-    * Node.js and npm (for the frontend)
+    * Vue.js (for the frontend)
     * Google Cloud Project with Vertex AI API enabled
     * Set up authentication - your user must have permissions for Vertex AI
 
@@ -44,13 +44,13 @@ This project demonstrates a simple web application that uses Google's Gemini AI 
 
 4. **Frontend Setup:**
 
-    * Navigate to the frontend directory: cd frontend
-    * Install dependencies: npm install
-    * Run the development server: npm run serve
+    * Navigate to the frontend directory
+    * Install dependencies: pip install -r requirements.txt
+    * Run the development server: python -m http.server 8081
 
 ## Usage
 
-    1. Open the web application in your browser (the address will be provided by the npm run serve command, usually http://localhost:8080).
+    1. Open the web application in your browser (the address will be provided by the python run serve command, usually http://127.0.0.1:8081/index.html).
     2. Enter the plain text you want to convert in the input area.
     3. Click the "Convert to HTML" button.
     4. The generated HTML will be displayed in the output area, and a live preview will be shown in the preview pane.
